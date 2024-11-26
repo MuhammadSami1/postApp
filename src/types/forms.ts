@@ -10,7 +10,7 @@ export type userForm = {
   textarea: string;
 };
 
-type CreatePostResponse = {
+export type CreatePostResponse = {
   success: boolean;
   message: string;
 };
