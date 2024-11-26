@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 
 const page = async ({ params }: { params: { id: string } }) => {
-  const { id } = await params;
+  const { id } = params;
   const res = await fetch(`https://dummyjson.com/posts/${id}`, {
     next: { revalidate: 3600 },
     cache: "force-cache",

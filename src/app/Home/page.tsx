@@ -19,6 +19,9 @@ const Page = () => {
 
   const onSubmit = async (data: FormData) => {
     toast.success("Sign-up successful!");
+    if (!data) {
+      throw new Error();
+    }
     reset();
   };
   return (
