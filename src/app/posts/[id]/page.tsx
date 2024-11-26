@@ -1,5 +1,8 @@
 import { notFound } from "next/navigation";
 
+export interface PageProps {
+  params?: Promise<{ id: string }>;
+}
 const page = async ({ params }: { params: { id: string } }) => {
   const { id } = params;
   const res = await fetch(`https://dummyjson.com/posts/${id}`, {
